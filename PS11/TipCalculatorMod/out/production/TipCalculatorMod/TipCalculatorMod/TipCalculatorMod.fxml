@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane hgap="5.0" vgap="5.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TipCalculatorMod.TipCalculatorModController">
+    <columnConstraints>
+        <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="119.0" minWidth="10.0" prefWidth="47.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="181.0" minWidth="0.0" prefWidth="180.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints maxHeight="37.0" minHeight="10.0" prefHeight="37.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="34.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="44.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="44.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children>
+        <Label fx:id="amountLabel" text="Amount" GridPane.halignment="CENTER" />
+        <Label fx:id="tipPercentageLabel" text="15%" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+        <Label fx:id="tipLabel" text="Tip" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+        <Label fx:id="totalLabel" text="Total" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+        <TextField fx:id="amountTextField" promptText="Enter the Amount" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+         <GridPane.margin>
+            <Insets left="5.0" right="5.0" />
+         </GridPane.margin></TextField>
+        <TextField fx:id="tipTextField" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets left="5.0" right="5.0" />
+         </GridPane.margin></TextField>
+        <TextField fx:id="totalTextField" editable="false" focusTraversable="false" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets left="5.0" right="5.0" />
+         </GridPane.margin></TextField>
+        <Slider fx:id="TipPercentageSlider" blockIncrement="5.0" max="30.0" value="15.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets left="5.0" right="5.0" />
+         </GridPane.margin></Slider>
+    </children>
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+    </padding>
+</GridPane>

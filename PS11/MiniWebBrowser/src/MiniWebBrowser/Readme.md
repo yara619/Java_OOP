@@ -1,3 +1,6 @@
+Author: Mehmood Yar Baig
+
+Investigate the capabilities of JavaFX’s WebView control and WebEngine class, then create a JavaFX app that provides basic web browsing capabilities.
 
 **Download the JavaFX SDK:**
 https://gluonhq.com/products/javafx/

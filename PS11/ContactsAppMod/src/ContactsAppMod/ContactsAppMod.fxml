@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<BorderPane style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ContactsAppMod.ContactsAppModController">
+    <left>
+        <ListView fx:id="booksListView" maxHeight="1.7976931348623157E308" prefWidth="200.0" style="-fx-background-color: #D7A240;" BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets right="8.0" />
+            </BorderPane.margin>
+        </ListView>
+    </left>
+    <padding>
+        <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+    </padding>
+    <center>
+        <GridPane prefHeight="399.0" prefWidth="400.0" style="-fx-background-color: #D7A240;" BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="194.0" minWidth="10.0" prefWidth="96.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="312.0" minWidth="10.0" prefWidth="304.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="241.0" minHeight="10.0" prefHeight="241.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="148.0" minHeight="10.0" prefHeight="41.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="113.0" minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="97.0" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="51.0" minHeight="10.0" prefHeight="39.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <ImageView fx:id="coverImageView" fitHeight="179.0" fitWidth="252.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <image>
+                  <Image url="@Images/img1.jpg" />
+               </image></ImageView>
+                <Label fx:id="firstNameLabel" text="First Name:" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+                <Label fx:id="lastNameLabel" text="Last Name:" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                <Label fx:id="emailLabel" text="Email:" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                <Label fx:id="phoneNumberLabel" text="Phone Number:" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                <TextField fx:id="firstNameTextField" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="5.0" right="5.0" />
+               </GridPane.margin></TextField>
+                <TextField fx:id="lastNameTextField" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="5.0" right="5.0" />
+               </GridPane.margin></TextField>
+                <TextField fx:id="emailTextField" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="5.0" right="5.0" />
+               </GridPane.margin></TextField>
+                <TextField fx:id="phoneNumberTextField" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="5.0" right="5.0" />
+               </GridPane.margin></TextField>
+                <Button fx:id="addButton" mnemonicParsing="false" onAction="#addButtonPressed" prefHeight="25.0" prefWidth="56.0" text="Add" GridPane.halignment="CENTER">
+               <GridPane.margin>
+                  <Insets top="30.0" />
+               </GridPane.margin></Button>
+                <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#deleteButtonPressed" prefHeight="26.0" prefWidth="56.0" text="Delete" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+               <GridPane.margin>
+                  <Insets bottom="5.0" />
+               </GridPane.margin></Button>
+                <Button fx:id="updateButton" mnemonicParsing="false" onAction="#updateButtonPressed" prefHeight="26.0" prefWidth="56.0" text="Update" GridPane.halignment="CENTER">
+               <GridPane.margin>
+                  <Insets top="120.0" />
+               </GridPane.margin></Button>
+            </children>
+        </GridPane>
+    </center>
+</BorderPane>
